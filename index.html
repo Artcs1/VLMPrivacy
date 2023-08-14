@@ -157,8 +157,8 @@
                   <span>Code</span>
                   </a>
               </span>
-<!--               <!-- Dataset Link. -->
-              <span class="link-block">
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -175,7 +175,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -189,7 +189,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="hero is-light is-small">
@@ -198,29 +198,41 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
+            <source src="./static/c2_videos/edited_gt_1.mp4"
                     type="video/mp4">
           </video>
+          <h4 class="subtitle has-text-centered">
+            <span class="dnerf"> Ground Truth
+          </h4>
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
+            <source src="./static/c2_videos/edited_ha2g_001_0.mp4"
                     type="video/mp4">
           </video>
+          <h4 class="subtitle has-text-centered">
+            <span class="dnerf"> HA2G
+          </h4>
         </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
+            <source src="./static/c2_videos/edited_diffgesture_1.mp4"
                     type="video/mp4">
           </video>
+          <h4 class="subtitle has-text-centered">
+            <span class="dnerf"> Diffgesture
+          </h4>
         </div>
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
+            <source src="./static/c2_videos/edited_s2g2_1.mp4"
                     type="video/mp4">
           </video>
+          <h4 class="subtitle has-text-centered">
+            <span class="dnerf"> C2G2
+          </h4>
         </div>
-        <div class="item item-blueshirt">
+        <!-- <div class="item item-blueshirt">
           <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/blueshirt.mp4"
                     type="video/mp4">
@@ -242,7 +254,7 @@
           <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/toby2.mp4"
                     type="video/mp4">
-          </video>
+          </video> -->
         </div>
       </div>
     </div>
@@ -258,38 +270,25 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            We present the first method capable of controlling the speaker identity and allowing movement editing with high-quality co-speech generation.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            Co-speech gesture generation is crucial for automatic digital avatar animation. 
+However, existing methods suffer from issues such as unstable training and temporal inconsistency, particularly in generating high-fidelity and comprehensive gestures. 
+Additionally, these methods lack effective control over speaker identity and temporal editing of the generated gestures.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            
+Focusing on capturing temporal latent information and applying practical controlling, we propose a Controllable Co-speech Gesture Generation framework, named C2G2.
+Specifically, we propose a two-stage temporal dependency enhancement strategy motivated by latent diffusion models.
+We further introduce two key features to C2G2, namely a speaker-specific decoder to generate speaker-related real-length skeletons and a repainting strategy for flexible gesture generation/editing. 
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
+    Paper video.
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
@@ -312,7 +311,7 @@
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">In-betweening Editing</h2>
           <p>
             Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
             would be impossible without nerfies since it would require going through a wall.
@@ -327,7 +326,7 @@
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Matting</h2>
+        <h2 class="title is-3">In-the-Middle Editing</h2>
         <div class="columns is-centered">
           <div class="column content">
             <p>

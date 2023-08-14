@@ -205,7 +205,7 @@
             <span class="dnerf"> Ground Truth
           </h4>
         </div>
-        <div class="item item-chair-tp">
+        <!-- <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
             <source src="./static/c2_videos/edited_ha2g_001_0.mp4"
                     type="video/mp4">
@@ -213,7 +213,7 @@
           <h4 class="subtitle has-text-centered">
             <span class="dnerf"> HA2G
           </h4>
-        </div>
+        </div> -->
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
             <source src="./static/c2_videos/edited_diffgesture_1.mp4"
@@ -288,7 +288,7 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
     </div>
     <!--/ Abstract. -->
 
-    Paper video.
+    <!-- Paper video.
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
@@ -297,7 +297,7 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
@@ -313,8 +313,7 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
         <div class="content">
           <h2 class="title is-3">In-betweening Editing</h2>
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            Using C2G2, you could generate high-fidelity gestures with in-the-middle movement editing without mismatching.
           </p>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/dollyzoom-stacked.mp4"
@@ -330,8 +329,7 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
+              Using C2G2, you could generate high-fidelity gestures with in-the-middle movement editing without mismatching.
             </p>
             <video id="matting-video" controls playsinline height="100%">
               <source src="./static/videos/matting.mp4"
@@ -347,60 +345,64 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Speaker-Related Generation</h2>
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <h3 class="title is-4">Speaker 1</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            Visual effects of localize the generated results into actual frames. We can generate long-term reliable results with 4 pre-frames and one random frame conditioning.
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
+            <img src="./static/images/jack.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
             <p>Start Frame</p>
           </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                   controls
+                   muted
+                   preload
+                   playsinline
+                   width="75%">
+              <source src="./static/c2_videos/jack.mp4"
+                      type="video/mp4">
+            </video>
           </div>
         </div>
         <br/>
+
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Speaker 2</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            Visual effects of localize the generated results into actual frames. We can generate long-term reliable results with 4 pre-frames and one random frame conditioning.
           </p>
         </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/lucy.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Start Frame</p>
+          </div>
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                   controls
+                   muted
+                   preload
+                   playsinline
+                   width="75%">
+              <source src="./static/c2_videos/lucy.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
         </div>
         <!--/ Re-rendering. -->
 

@@ -6,7 +6,7 @@
         content="C2G2: Controllable Co-speech Gesture Generation with Latent diffusion models">
   <meta name="keywords" content="C2G2, latent_diffusion, Gesture_generation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>C2G2: Controllable Co-speech Gesture Generation with Latent diffusion models</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -288,13 +288,15 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
     </div>
     <!--/ Abstract. -->
 
-    Paper video.
+    <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <h2 class="title is-3">Model</h2>
+        <div class="column is-3 has-text-centered">
+          <img src="./static/images/jack.png"
+               class="interpolation-image"
+               alt="Interpolate start reference image."/>
+          <p>C2G2: Model Structure</p>
         </div>
       </div>
     </div> 
@@ -366,7 +368,7 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
                    muted
                    preload
                    playsinline
-                   width="50%">
+                   width="40%">
               <source src="./static/c2_videos/jack.mp4"
                       type="video/mp4">
             </video>
@@ -397,7 +399,7 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
                    muted
                    preload
                    playsinline
-                   width="50%">
+                   width="40%">
               <source src="./static/c2_videos/lucy.mp4"
                       type="video/mp4">
             </video>
@@ -417,9 +419,10 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
 
         <div class="content has-text-justified">
           <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
+            Our work is mainly based on Diffgesture and Taming Transformer. Thanks the authors for their great contributions and inspiring ideas.
           </p>
           <p>
+            Also, There's a lot of excellent work that was introduced around the same time as ours for co-speech generation.
             <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
           </p>
           <p>

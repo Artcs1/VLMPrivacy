@@ -233,8 +233,8 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
   <div class="hero-body">
     <div class="container">
       <div class="columns is-centered has-text-centered">
-        <h2 class="title is-3">Short clips</h2>
         <div id="results-carousel" class="carousel results-carousel">
+        <h2 class="title is-3">Short clips</h2>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
               <source src="./static/c2_videos/short_gt_4.mp4"
@@ -285,7 +285,6 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
 <section class="section">
   <div class="hero-body">
     <div class="container">
-      <div class="columns is-centered has-text-centered">
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
@@ -338,7 +337,7 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="columns is-centered has-text-centered">
-        <h2 class="title is-3">Long clips</h2>
+          <h2 class="title is-3">Long clips</h2>
           <div class="item item-steve">
             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
               <source src="./static/c2_videos/long_gt_2.mp4"
@@ -389,41 +388,45 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
 
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/c2_videos/edited_gt_1.mp4"
-                    type="video/mp4">
-          </video>
-          <h4 class="subtitle has-text-centered">
-            <span class="dnerf"> Ground Truth
-          </h4>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/c2_videos/edited_s2g2_1.mp4"
-                    type="video/mp4">
-          </video>
-          <h4 class="subtitle has-text-centered">
-            <span class="dnerf"> C2G2
-          </h4>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/c2_videos/edited_diffgesture_1.mp4"
-                    type="video/mp4">
-          </video>
-          <h4 class="subtitle has-text-centered">
-            <span class="dnerf"> Diffgesture
-          </h4>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/c2_videos/edited_ha2g_001_0.mp4"
-                    type="video/mp4">
-          </video>
-          <h4 class="subtitle has-text-centered">
-            <span class="dnerf"> HA2G
-          </h4>
+        <div class="columns is-centered has-text-centered">
+          <h2 class="title is-3">Middle clips (In-betweening Edit)</h2>
+          <h4> First 4 frames is given as pre condition, 150-173 is ground truth; 144-150 uses gt for repaint sampling</h4>
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/c2_videos/edited_gt_1.mp4"
+                      type="video/mp4">
+            </video>
+            <h4 class="subtitle has-text-centered">
+              <span class="dnerf"> Ground Truth
+            </h4>
+          </div>
+          <div class="item item-shiba">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/c2_videos/edited_s2g2_1.mp4"
+                      type="video/mp4">
+            </video>
+            <h4 class="subtitle has-text-centered">
+              <span class="dnerf"> C2G2
+            </h4>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/c2_videos/edited_diffgesture_1.mp4"
+                      type="video/mp4">
+            </video>
+            <h4 class="subtitle has-text-centered">
+              <span class="dnerf"> Diffgesture
+            </h4>
+          </div>
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/c2_videos/edited_ha2g_001_0.mp4"
+                      type="video/mp4">
+            </video>
+            <h4 class="subtitle has-text-centered">
+              <span class="dnerf"> HA2G
+            </h4>
+          </div>
         </div>
         
         </div>

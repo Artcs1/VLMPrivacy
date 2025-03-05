@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="C2G2: Controllable Co-speech Gesture Generation with Latent diffusion models">
-  <meta name="keywords" content="C2G2, latent_diffusion, Gesture_generation">
+        content="PoseTraj: Pose-Aware Trajectory Control in Video Diffusion">
+  <meta name="keywords" content="Trajectory Control, Video Generation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>C2G2: Controllable Co-speech Gesture Generation with Latent diffusion models</title>
+  <title>PoseTraj: Pose-Aware Trajectory Control in Video Diffusion</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -88,35 +88,29 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">C2G2: Controllable Co-speech Gesture Generation</h1>
+          <h1 class="title is-1 publication-title">PoseTraj: Pose-Aware Trajectory Control in Video Diffusion</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=nXPxnK8AAAAJ&hl=zh-CN&oi=sra">Longbin Ji</a><sup>1,2</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=nXPxnK8AAAAJ&hl=zh-CN&oi=sra">Longbin Ji</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://pengfei-wei.com/">Pengfei Wei</a><sup>2</sup>,</span>
+              <a href="https://pengfei-wei.com/">Lei Zhong</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://rayeren.github.io/">Yi Ren</a><sup>2</sup>,
+              <a href="https://rayeren.github.io/">Pengfei Wei</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://silentlin15.github.io/">Jinglin Liu</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://actuy.github.io/">Chen Zhang</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="">Xiang.Yin</a><sup>2</sup>,
+              <a href="https://silentlin15.github.io/">Changjian Li</a><sup>1</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Xi'an Jiaotong Liverpool University,</span>
-            <span class="author-block"><sup>2</sup>Bytedance Research</span>
+            <span class="author-block"><sup>1</sup>University of Edinburgh,</span>
+            <span class="author-block"><sup>2</sup>NTU</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/2308.15016"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -124,7 +118,7 @@
                   </span>
                   <span>Paper</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Video Link. -->
 <!--               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
@@ -137,7 +131,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/C2G2-Gesture/C2G2"
+                <a href="https://github.com/robingg1/PoseTraj"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -179,19 +173,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of controlling the speaker identity and allowing movement editing with high-quality co-speech generation.
+            We introduce PoseTraj, the first open-domain, Pose-Aware video dragging model for reliable 3D-aligned animations from 2D trajectories. Our method incorporates a novel Two-Stage Pose-Aware Pretraining framework, improving 3D understanding across diverse trajectories. Specifically, we 1) construct a large-scale synthetic dataset containing 10k videos of objects following rotational trajectories and 2) enhance the model perception of object pose changes by generating 3D bounding boxes as intermediate supervision signals. Following this, we fine-tune the trajectory-controlling module on open-domain videos, applying an additional camera disentanglement module to further refine motion accuracy. Experiments on various benchmark scenarios demonstrate that PoseTraj not only excels in 3D Pose-Aligned dragging for rotational scenarios but also outperforms existing baselines in trajectory accuracy and video quality.
           </p>
-          <p>
-            Co-speech gesture generation is crucial for automatic digital avatar animation. 
-However, existing methods suffer from issues such as unstable training and temporal inconsistency, particularly in generating high-fidelity and comprehensive gestures. 
-Additionally, these methods lack effective control over speaker identity and temporal editing of the generated gestures.
-          </p>
-          <p>
+          <!-- <p>
             
 Focusing on capturing temporal latent information and applying practical controlling, we propose a Controllable Co-speech Gesture Generation framework, named C2G2.
 Specifically, we propose a two-stage temporal dependency enhancement strategy motivated by latent diffusion models.
 We further introduce two key features to C2G2, namely a speaker-specific decoder to generate speaker-related real-length skeletons and a repainting strategy for flexible gesture generation/editing. 
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
@@ -202,7 +191,7 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
       <div class="column is-four-fifths">
         <h2 class="title is-3">Model</h2>
         <div style="width:850px;display:block;margin:0 auto">
-          <img src="./static/images/new_c2g2.jpeg"
+          <img src="./static/images/model.jpg"
                class="interpolation-image"
                alt="Interpolate start reference image."/>
           <p>C2G2: Model Structure</p>
@@ -218,185 +207,25 @@ We further introduce two key features to C2G2, namely a speaker-specific decoder
   </div>
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/c2_videos/short_gt_4.mp4"
-                    type="video/mp4">
-          </video>
-          <h4 class="subtitle has-text-centered">
-            <span class="dnerf"> Ground Truth
-          </h4>
+      <div class="columns">
+        <div class="column">
+          <img src="./static/pose_videos/car1.png" alt="Ground Truth">
+          <h4 class="subtitle has-text-centered">Ground Truth</h4>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/c2_videos/short_s2g2_4.mp4"
-                    type="video/mp4">
-          </video>
-          <h4 class="subtitle has-text-centered">
-            <span class="dnerf"> C2G2
-          </h4>
+        <div class="column">
+          <img src="./static/pose_videos/car1_traj.png" alt="C2G2">
+          <h4 class="subtitle has-text-centered">C2G2</h4>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/c2_videos/short_diffgesture_4.mp4"
-                    type="video/mp4">
-          </video>
-          <h4 class="subtitle has-text-centered">
-            <span class="dnerf"> Diffgesture
-          </h4>
+        <div class="column">
+          <img src="./static/pose_videos/traj_car1.gif" alt="Diffgesture">
+          <h4 class="subtitle has-text-centered">Diffgesture</h4>
         </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/c2_videos/short_ha2g_000_4.mp4"
-                    type="video/mp4">
-          </video>
-          <h4 class="subtitle has-text-centered">
-            <span class="dnerf"> HA2G
-          </h4>
-        </div>
+        <!-- <div class="column">
+          <img src="./static/c2_videos/short_ha2g_000_4.gif" alt="HA2G">
+          <h4 class="subtitle has-text-centered">HA2G</h4>
+        </div> -->
       </div>
     </div>
-
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/c2_videos/short_gt_8.mp4"
-                    type="video/mp4">
-          </video>
-          <h4 class="subtitle has-text-centered">
-            <span class="dnerf"> Ground Truth
-          </h4>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/c2_videos/short_s2g2_8.mp4"
-                    type="video/mp4">
-          </video>
-          <h4 class="subtitle has-text-centered">
-            <span class="dnerf"> C2G2
-          </h4>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/c2_videos/short_diffgesture_8.mp4"
-                    type="video/mp4">
-          </video>
-          <h4 class="subtitle has-text-centered">
-            <span class="dnerf"> Diffgesture
-          </h4>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/c2_videos/short_ha2g_000_8.mp4"
-                    type="video/mp4">
-          </video>
-          <h4 class="subtitle has-text-centered">
-            <span class="dnerf"> HA2G
-          </h4>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- <section class="section">
-  <div class="hero-body">
-    <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/c2_videos/short_gt_8.mp4"
-                      type="video/mp4">
-            </video>
-            <h4 class="subtitle has-text-centered">
-              <span class="dnerf"> Ground Truth
-            </h4>
-          </div>
-          <div class="item item-shiba">
-            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/c2_videos/short_s2g2_8.mp4"
-                      type="video/mp4">
-            </video>
-            <h4 class="subtitle has-text-centered">
-              <span class="dnerf"> C2G2
-            </h4>
-          </div>
-          <div class="item item-chair-tp">
-            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/c2_videos/short_diffgesture_8.mp4"
-                      type="video/mp4">
-            </video>
-            <h4 class="subtitle has-text-centered">
-              <span class="dnerf"> Diffgesture
-            </h4>
-          </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/c2_videos/short_ha2g_000_8.mp4"
-                      type="video/mp4">
-            </video>
-            <h4 class="subtitle has-text-centered">
-              <span class="dnerf"> HA2G
-            </h4>
-          </div>
-          
-        </div>
-    </div>
-
-    
-  </div>
-</section> -->
-
-<section class="section">
-  <div class="columns is-centered has-text-centered">
-    <h2 class="title is-3">Long clips</h2>
-  </div>
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/c2_videos/long_gt_2.mp4"
-                      type="video/mp4">
-            </video>
-            <h4 class="subtitle has-text-centered">
-              <span class="dnerf"> Ground Truth
-            </h4>
-          </div>
-          <div class="item item-shiba">
-            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/c2_videos/long_s2g2_2.mp4"
-                      type="video/mp4">
-            </video>
-            <h4 class="subtitle has-text-centered">
-              <span class="dnerf"> C2G2
-            </h4>
-          </div>
-          <div class="item item-chair-tp">
-            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/c2_videos/long_diffgesture_2.mp4"
-                      type="video/mp4">
-            </video>
-            <h4 class="subtitle has-text-centered">
-              <span class="dnerf"> Diffgesture
-            </h4>
-          </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/c2_videos/long_ha2g_002_0.mp4"
-                      type="video/mp4">
-            </video>
-            <h4 class="subtitle has-text-centered">
-              <span class="dnerf"> HA2G
-            </h4>
-          </div>
-  
-      </div>
-    </div>
-    
   </div>
 </section>
 

@@ -324,10 +324,22 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce PoseTraj, the first open-domain, Pose-Aware video dragging model for reliable 3D-aligned animations from 2D trajectories. Our method incorporates a novel Two-Stage Pose-Aware Pretraining framework, improving 3D understanding across diverse trajectories. 
-          </p>
-          <p>
-            Specifically, we 1. construct a large-scale synthetic dataset containing 10k videos of objects following rotational trajectories and 2. enhance the model perception of object pose changes by generating 3D bounding boxes as intermediate supervision signals. Following this, we fine-tune the trajectory-controlling module on open-domain videos, applying an additional camera disentanglement module to further refine motion accuracy. Experiments on various benchmark scenarios demonstrate that PoseTraj not only excels in 3D Pose-Aligned dragging for rotational scenarios but also outperforms existing baselines in trajectory accuracy and video quality.
+          As visual assistant systems powered by visual language models (VLMs) be-
+come more prevalent, concerns over user privacy have grown, particularly
+for blind and low vision users who may unknowingly capture personal
+private information in their images. Existing privacy protection methods
+rely on coarse-grained segmentation, which uniformly masks entire private
+objects, often at the cost of usability. In this work, we propose FiG-Priv, a
+fine-grained privacy protection framework that selectively masks only high-risk
+private information while preserving low-risk information. Our approach
+integrates fine-grained segmentation with a data-driven risk scoring mech-
+anism. By leveraging a more nuanced understanding of privacy risk, our
+method enables more effective protection without unnecessarily restricting
+users’ access to critical information. We evaluate our framework using the
+BIV-Priv-Seg dataset and show that FiG-Priv preserves +26% of image
+content, enhancing the ability of VLMs to provide useful responses by 11%
+and identify the image content by 45%, while ensuring privacy protection.
+            
           </p>
         </div>
       </div>
